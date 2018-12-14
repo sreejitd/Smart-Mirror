@@ -13,8 +13,11 @@ Things you need:
 
 STEPS:
 Step0: import all the required python libraries like locale,threading,requests,json,Tkinter
+
 Step1: Initialize required variables, weather_api ,lattitude,longitude,news_country_code,
 	icon_lookup<-array of all the images required
+
+
 Step2: create class clock
 	create time label  
 	timeLbl1< - Label(self,..)
@@ -27,6 +30,7 @@ Step2: create class clock
 	create a  function  tick()  
 	update and display time
 	timeLbl1.after(200,tick) to call self function every 200 ms to update time etc.
+
 
 	
 Step3: create class weather
@@ -46,12 +50,16 @@ Step3: create class weather
 	create a function tick()
 	updates the weather
 	after(60000,tick) to call tick function every 6000 ms to update time etc.
-step 5:create class NewsHeadline
+
+
+Step 5:create class NewsHeadline
 	pack newspaper image in the Tkinter window	
 	image<-Image.open("assets/Newspaper.png")
 	photo <-ImageTk.PhotoImage(image)
 	iconLbl<-Label(self,image=photo)
 	iconLbl.pack()
+
+
 Step4: create class news
 	Initialize required variables
 	news_country_code<- '  ' 
@@ -63,6 +71,8 @@ feedparser is a python module to download and parse feeds
                 	headline <- NewsHeadline(self.headlinesContainer, post.title)
                 	headline.pack()
  	self.after(600000, self.get_headlines) calls get_headlines function every 600000 ms
+
+
 Step 5: create class Fullscreen 
 	Divide the Tkinter window into Top frame and Bottom Frame
 	create object of class news  and use the object to pack the Tkinter window
@@ -71,6 +81,8 @@ Step 5: create class Fullscreen
 	weather.pack()
 	create object of class clock and use the object to pack the TKinter window
 	clock.pack()
+
+
 Step6: Inside main():
 	create an object of class Fullscreen as w
-	run Tkinter mainloop function with the Fulscreen object.
+	run Tkinter mainloop function with the Fullscreen object.
