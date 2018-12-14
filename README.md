@@ -1,5 +1,7 @@
 # Smart-Mirror
-Tinkering around a smart mirror interface using Python
+Tinkering around a smart mirror interface using Python and a RaspberryPi3B
+
+
 Things you need:
 1. Raspberry Pi 3B
 2. A screen
